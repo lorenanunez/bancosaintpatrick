@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Banco Saint Patrick
+  datasource:
+    url: jdbc:mysql://localhost:3306/bancosaintpatrick
+    username: ${dbuser}
+    password: ${dbpass}
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
