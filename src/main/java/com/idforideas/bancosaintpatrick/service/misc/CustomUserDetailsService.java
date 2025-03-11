@@ -1,4 +1,4 @@
-package com.idforideas.bancosaintpatrick.service;
+package com.idforideas.bancosaintpatrick.service.misc;
 
 import com.idforideas.bancosaintpatrick.entity.Card;
 import com.idforideas.bancosaintpatrick.repository.CardRepository;
