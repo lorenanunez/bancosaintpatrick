@@ -1,7 +1,7 @@
 package com.idforideas.bancosaintpatrick.controller;
 
 import com.idforideas.bancosaintpatrick.entity.dto.CardInfoDto;
-import com.idforideas.bancosaintpatrick.service.card.CardService;
+import com.idforideas.bancosaintpatrick.service.card.CardInfoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class CardController {
 
-    private CardService cardService;
+    private CardInfoService cardInfoServiceService;
 
     @GetMapping(produces = "application/json")
     @ResponseStatus(value = HttpStatus.OK)
     public CardInfoDto getCardInfo() {
-        return cardService.getCardInfoService().getCurrentCardInformation();
+        return cardInfoServiceService.getCurrentCardInformation();
     }
-
 
 }
