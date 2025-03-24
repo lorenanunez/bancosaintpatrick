@@ -23,7 +23,10 @@ public class SecurityConfiguration {
         http.csrf(csrf -> csrf.disable());
         http.cors(cors -> cors.disable());
         http.httpBasic(Customizer.withDefaults());
-        http.authorizeHttpRequests(request -> request.anyRequest().fullyAuthenticated());
+        http.authorizeHttpRequests(request ->
+                request.requestMatchers("/card", "/transaction").fullyAuthenticated()
+                        .anyRequest().permitAll()
+        );
 
         return http.build();
     }
